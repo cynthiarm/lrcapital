@@ -35,8 +35,8 @@ if(menu.length){
 // review-active
 $('.service_active').owlCarousel({
   loop:true,
-  margin:30,
-items:1,
+  margin:10,
+items:8,
 autoplay:true,
 navText:['<i class="ti-angle-left"></i>','<i class="ti-angle-right"></i>'],
   nav:true,
@@ -49,19 +49,19 @@ autoplaySpeed: 800,
           nav:false,
       },
       767:{
-          items:2,
+          items:1,
           nav:true
       },
       992:{
-          items:3,
+          items:1,
           nav:true
       },
       1200:{
-          items:3,
+          items:2,
           nav:true
       },
       1600:{
-          items:3,
+          items:2,
           nav:true
       }
   }
