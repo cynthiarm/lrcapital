@@ -820,9 +820,38 @@ h3 {
     font-weight: 400;
     color: #FF9800;
     text-transform: capitalize;
-}
+  }
+
+  .header-area .main-header-area .main-menu ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 30px 0 0;
+  }
   
+  /* line 158, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
+  .header-area .main-header-area .main-menu ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    text-transform: capitalize;
+  }
+  
+  .header-area .main-header-area .main-menu ul li:last-child a  {
+    padding-left: 0;
+    color: #ffffff;
+    margin-left: 15px;
+  }
+
+  .header-area .main-header-area .main-menu ul li a i {
+    font-size: 16px;
+  }
 }
+
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 35, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
@@ -3436,7 +3465,7 @@ h3 {
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 137, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
   .chose_area .features_info {
-    padding-left: 30px;
+    padding-left: 70px;
     padding-top: 0;
   }
 
