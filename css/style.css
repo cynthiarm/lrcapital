@@ -701,6 +701,7 @@ h3 {
     font-size: 30px;
     line-height: 36px;
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -797,6 +798,30 @@ h3 {
   .slicknav_menu .slicknav_nav a i {
     display: none;
   }
+
+  .slicknav_menu .slicknav_nav {
+    background: #001D38;
+    float: right;
+    margin-top: 0;
+    padding: 0;
+    width: 95%;
+    padding: 0;
+    border-radius: 0px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 11px;
+  }
+
+  .slicknav_nav a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FF9800;
+    text-transform: capitalize;
+}
+  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1272,6 +1297,7 @@ h3 {
     margin-left: 15px;
   }
   
+  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1607,7 +1633,7 @@ h3 {
 @media (max-width: 767px) {
   /* line 20, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slider.scss */
   .slider_area .single_slider {
-    height: auto;
+    height: 500px;
   }
 }
 
@@ -2772,6 +2798,38 @@ h3 {
   .download_brochure {
     display: block !important;
   }
+
+  .cobertura-container .map {
+    width: 100%;
+  }
+  
+  .cobertura-container .logo {
+    position: absolute;
+    left: calc(50% - 55px)!important;
+    top: calc(50% - 75px);
+    width: 60px!important;
+  }
+
+  .accordion_area {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  .cobertura_details_area .cobertura_details_info {
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  
+  .download_brochure .download_left {
+    display: block !important;
+    margin-bottom: 20px;
+  }
+
+  .cobertura_details_area .cobertura_details_info {
+    margin-bottom: 36px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2787,6 +2845,7 @@ h3 {
     display: block !important;
     margin-bottom: 20px;
   }
+  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2826,7 +2885,7 @@ h3 {
 
 /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .contact_action_area {
-  background-image: url(../img/banner/iStock-1487914172.jpg);
+  background-image: url(../img/oferta3.jpg);
   position: relative;
   z-index: 0;
   padding: 78px 0;
@@ -2836,7 +2895,7 @@ h3 {
 }
 
 .contact_action_area1 {
-  background-image: url(../img/banner/iStock-1487914172.jpg);
+  background-image: url(../img/oferta1.jpg);
   position: relative;
   z-index: 0;
   padding: 78px 0;
@@ -2848,6 +2907,16 @@ h3 {
 
 .responsabilidad_area {
   background-image: url(../img/banner/lrcp-nosotros-responsabilidad-u6821-fr.jpg);
+  position: relative;
+  z-index: 0;
+  padding: 55px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.oferta_area {
+  background-image: url(../img/oferta2.jpg);
   position: relative;
   z-index: 0;
   padding: 55px 0;
@@ -2904,6 +2973,18 @@ h3 {
   content: '';
 }
 
+.oferta_area::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #001d388a;
+  opacity: .7;
+  z-index: -1;
+  content: '';
+}
+
 @media (max-width: 767px) {
   /* line 23, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
   .contact_action_area .action_heading {
@@ -2915,6 +2996,10 @@ h3 {
   }
 
   .responsabilidad_area .action_heading {
+    text-align: center;
+  }
+
+  .oferta_area .action_heading {
     text-align: center;
   }
 }
@@ -2940,6 +3025,14 @@ h3 {
   font-weight: 400;
   margin-bottom: 13px;
 }
+
+.oferta_area .action_heading h3 {
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
 
 @media (max-width: 767px) {
   /* line 27, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
@@ -2968,6 +3061,10 @@ h3 {
   .responsabilidad_area .action_heading h3 {
     font-size: 30px;
   }
+
+  .oferta_area .action_heading h3 {
+    font-size: 30px;
+  }
 }
 
 /* line 43, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
@@ -2979,6 +3076,13 @@ h3 {
 }
 
 .responsabilidad_area .action_heading p {
+  color: #EAEAEA;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.oferta_area .action_heading p {
   color: #EAEAEA;
   font-size: 20px;
   line-height: 28px;
@@ -3096,6 +3200,14 @@ h3 {
   .permisos_area {
     padding: 70px 0 72px 0;
   }
+
+  .footer .footer_top .footer_widget .footer-logo img {
+    width: 80px!important;
+  }
+
+  .chose_area .chose_area-logo img {
+    width: 80px!important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3172,6 +3284,16 @@ h3 {
     display: none;
   }
 
+  .chose_area .about_image {
+    position: relative;
+    z-index: 0;
+    /* overflow: hidden; */
+    filter: brightness(0.8);
+    width: 400px;
+    height: 350px;
+    margin-top: 10px;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -3199,8 +3321,8 @@ h3 {
 }
 
 .permisos_area .permisos_image img {
-  max-width: 150%;
-  margin-left: -200px;
+  max-width: 90%;
+  margin-left: 30px;
 }
 
 .aviso_details_area .aviso_image img {
@@ -3258,6 +3380,7 @@ h3 {
     padding-bottom: 50px;
     padding-left: 10px;
     padding-right: 10px;
+    text-align: center;
   }
 
   .about_area .features_info {
@@ -3973,6 +4096,7 @@ h3 {
   /* line 11, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_Estimate_area.scss */
   .Estimate_area .Estimate_info {
     margin-bottom: 30px;
+    text-align: center;
   }
 }
 
@@ -4656,6 +4780,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_transport.scss */
   .transportaion_area {
     padding: 70px 0 40px 0;
+    text-align: center;
   }
 
   .values_area {
@@ -5592,12 +5717,25 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
     padding-top: 60px;
     padding-bottom: 30px;
   }
+
+  .footer {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #000000;
+    text-align: center;
+  }
 }
 
 @media (max-width: 767px) {
   /* line 14, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
   .footer .footer_top .footer_widget {
     margin-bottom: 30px;
+  }
+
+  .footer .footer_top .footer_widget .logo .img {
+    width: 70%;
   }
 }
 
@@ -5633,14 +5771,6 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   margin-bottom: 40px;
 }
 
-@media (max-width: 767px) {
-  /* line 31, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
-  .footer .footer_top .footer_widget .footer_logo {
-    margin-bottom: 20px;
-  }
-
-
-}
 
 /* line 41, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget p {
@@ -6288,6 +6418,36 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   .products_area {
     padding: 50px 0 20px 0;
   }
+
+  .about-title {
+    font-size: 27px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .products_area .single_product {
+    margin-bottom: 30px;
+    width: 400px;
+  }
+
+  .products_area .single_product .thumb {
+    overflow: hidden;
+    position: relative;
+    filter: brightness(0.6);
+    width: 400px!important;
+  }
+
+  .products_area .single_product .products_info {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .products_area .single_product {
+    margin-bottom: 30px;
+    width: 400px!important;
+  }
+  
 }
 
 /* line 7, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_service.scss */
@@ -6508,6 +6668,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 }
 
 
+
 /* line 57, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_service.scss */
 .service_area .single_service:hover .thumb img {
   -webkit-transform: scale(1);
@@ -6522,9 +6683,6 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-
-
-
 
 /* line 60, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_service.scss */
 .service_area .single_service:hover .thumb::before {
@@ -9953,6 +10111,7 @@ h6 {
 .cobertura-container .map {
 
 }
+
 .cobertura-container .logo {
   position: absolute;
   left: calc(50% - 75px);
