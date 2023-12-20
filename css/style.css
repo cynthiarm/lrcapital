@@ -3035,10 +3035,10 @@ h3 {
 
 /* line 27, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .contact_action_area .action_heading h3 {
-  font-size: 40px;
+  font-size: 38px;
   color: #fff;
   font-weight: 400;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
 }
 
 .contact_action_area1 .action_heading h3 {
@@ -3350,8 +3350,9 @@ h3 {
 }
 
 .permisos_area .permisos_image img {
-  max-width: 90%;
-  margin-left: 30px;
+  max-width: 150%;
+  margin-left: -150px;
+
 }
 
 .aviso_details_area .aviso_image img {
@@ -3360,8 +3361,6 @@ h3 {
   margin-top: 50px;
 
 }
-
-
 
 /* line 133, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .chose_area .about_draw img {
