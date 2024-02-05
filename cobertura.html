@@ -71,7 +71,7 @@
                 </div>
             </div>-->
             <div id="sticky-header" class="main-header-area">
-                <div class="container">
+                <div class="header-area container">
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-3">
@@ -310,11 +310,11 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="col-xl-2 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="img/logo/lrcp-logo-footer.png" alt="">
+                                    <img src="img/logo/lrcp-logo-footer1.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -326,19 +326,23 @@
                             </h3>
                             <ul>
                                 <li><a href="nosotros.html">Nosotros</a></li>
+                                <li><a href="servicios.html">Servicios</a></li>
                                 <li><a href="productos.html">Productos</a></li>
                                 <li><a href="cobertura.html">Cobertura</a></li>
                                 <li><a href="avisoprivacidad.html">Aviso de Privacidad</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="col-xl-4 col-lg-3 col-md-6">
                         <div class="footer_widget">
                             <h3 class="footer_title"><img src="img/icon/address (2).svg" alt=""> Puerto Peñasco</h3>
-                            <p>Av. Coahuila 444, Int A4, Col. Benito Juarez, Puerto Peñasco Sonora,835540</p>
-                            <h3 class="footer_title"> <img src="img/icon/support (2).svg" alt=""> Contacto</h3>
-                            <p>638 383 6320 Ext 109 <br>informacion@lrcapitalpacifico.com</p>
+                            <p>Av. Coahuila 444, Int A4, Col. Benito Juarez, 83554</p>
+                            <span><img src="img/icon/support (2).svg" alt=""> 638 383 6320 Ext 109 </span></br></br>
+                            <h3 class="footer_title"><img src="img/icon/address (2).svg" alt=""> Veracruz, Veracruz.</h3>
+                            <p>Cocoteros N.9, Colonia Bruno Pagliai, Ciudad industrial, 91697</p>                 
+                            <span><img src="img/icon/support (2).svg" alt=""> +52 229 283 9320</span>
                         </div>
+                        
                     </div>
 
         <!--            <div class="col-xl-3 col-md-6 col-lg-3">
@@ -372,12 +376,19 @@
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                Enviar Mensaje
+                                Subscribirse
                             </h3>
-                            <p class="newsletter_text">Envíanos un mensaje para brindarle más información.</p>
-                            <form action="#" class="newsletter_form">
-                                <input type="text" placeholder="Ingrese su E-mail">
-                                <button type="submit">Enviar</button>
+                            <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                                <span class="newsletter_text">Subscribase para brindarle más información.</span>
+                                <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
+                                <input type="email" name="email" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                <!-- form message -->
+                                <p><span id="sendmessagefooter"></span></p>
+                                <div class="errormessage" id="errormessage"></div>
+                                <!-- Send message -->
+                                <div class="form-group mt-3">
+                                    <button onclick="showHint()" type="submit">Enviar</button>
+                                </div>                                                                        
                             </form>
                         </div>
                     </div>

@@ -32,6 +32,19 @@
     <link rel="stylesheet" href="fonts/fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="fonts/flaticon.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <script>
+        function showHint() {
+            $name = document.getElementById("name").value;
+            $email = document.getElementById("email").value;
+            $subject = document.getElementById("subject").value;
+            $message = document.getElementById("message").value;
+
+            if ($name != '' || $email != '' || $message != '') {
+                document.getElementById("sendmessage").innerHTML = 'Su mensaje ha sido enviado. Muchas gracias.';
+            }
+
+        }
+    </script>
 </head>
 
 <body>
@@ -70,7 +83,7 @@
                 </div>
             </div>-->
             <div id="sticky-header" class="main-header-area">
-                <div class="container">
+                <div class="header-area container">
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
                             <div class="col-xl-3 col-lg-3">
@@ -177,7 +190,7 @@
                                                 <div class="media-body">
                                                     <span class="contact-info__icon"><i class="ti-mobile"></i></span>
                                                     <p>638 383 6320 Ext 109</p>
-                                                    <p>Mon to Fri 9am to 6pm</p>
+                                                 <!--   <p>Mon to Fri 9am to 6pm</p>-->
                                                 </div>
                                             </div>
                                             <div class="media contact-info">
@@ -198,17 +211,18 @@
                                                 <div class="media-body">
                                                     <span class="contact-info__icon"><i class="ti-home"></i></span>
                                                     <h3>Corporativo Base Veracruz</h3></br>
-                                                    <p>Puerto Peñasco, Sonora.</p>
-                                                    <p>Av. Coahuila 444, Int A4, Col. Benito Juarez, 83554</p>
+                                                    <p>Veracruz, Veracruz.</p>
+                                                    <p>Cocoteros N.9, Colonia Bruno Pagliai, </br>
+                                                        Ciudad industrial, 91697</p>                       
                                                 </div>
                                             </div>
                                             <div class="media contact-info">
                                                 <div class="media-body">
                                                     <span class="contact-info__icon"><img src="img/icon/phone-call.svg" alt=""></span>
-                                                        <p>229 283 9320 9</p>
-                                                    <span class="contact-info__icon"><i class="ti-mobile"></i></span>
-                                                        <p>722 711 2350</p>
-                                                        <p>5565780774</p></br>
+                                                        <p>+52 229 283 9320</p></br></br></br>
+                                                  <!--  <span class="contact-info__icon"><i class="ti-mobile"></i></span>
+                                                        <p>722 711 2350</p>-->
+                                                     <!--   <p>5565780774</p></br>-->
                                                     <!--  <p>Mon to Fri 9am to 6pm</p>-->
                                                     </div>
                                                 </div>
@@ -254,33 +268,48 @@
                         <div class="container">
                             <div class="row">           
                                 <div class="col-12">              
-                                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                                    <form class="contactForm" action="contact_process.php" method="post" id="contactForm" role="form">
                                         <div class="row">
                                             <div class="col-12">
                                                 <h2 class="contact-title text-center">MENSAJE DIRECTO</h2>
                                                 <p class="text-center">¡Envíenos su pregunta cuando quiera!</p>
+                                                <input hidden name="type" type="hidden" id="type" class="form-control" value='1'
+									            data-msg="Please enter at least 4 chars" />
+                                            </div>    
+                                            <div class="col-sm-6">    
                                                 <div class="form-group">
-                                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Message"></textarea>
+                                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu nombre'" placeholder="Escribe tu nombre" data-rule="minlen:4"
+                                                    data-msg="Escriba su nombre completo" />
+                                                    <div class="validation"></div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Escribe tu nombre">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Escriba su dirección de correo electrónico">
+                                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su dirección de correo electrónico'" placeholder="Escriba su dirección de correo electrónico" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                                    <div class="validation"></div>
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Escriba el asunto">
+                                                    <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba el asunto'" placeholder="Escriba el asunto" data-rule="required"
+                                                    data-msg="Por favor, escriba algo para nosotros" >
+                                                    <div class="validation"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Escriba su mensaje" data-rule="required" data-msg="Por favor, escriba algo para nosotros"></textarea>
+                                                    <div class="validation"></div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- form message -->
+                                        <p><span id="sendmessage"></span></p>
+                                        <div class="errormessage" id="errormessage"></div>
+                                        <!-- Send message -->
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn">Enviar</button>
+                                            <button onclick="showHint()" type="submit"
+                                                class="button button-contactForm boxed-btn">Enviar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -299,11 +328,11 @@
         <div class="footer_top">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-3 col-md-6 col-lg-3">
+                    <div class="col-xl-2 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <div class="footer-logo">
                                 <a href="index.html">
-                                    <img src="img/logo/lrcp-logo-footer.png" alt="">
+                                    <img src="img/logo/lrcp-logo-footer1.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -315,19 +344,23 @@
                             </h3>
                             <ul>
                                 <li><a href="nosotros.html">Nosotros</a></li>
+                                <li><a href="servicios.html">Servicios</a></li>
                                 <li><a href="productos.html">Productos</a></li>
                                 <li><a href="cobertura.html">Cobertura</a></li>
                                 <li><a href="avisoprivacidad.html">Aviso de Privacidad</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="col-xl-4 col-lg-3 col-md-6">
                         <div class="footer_widget">
                             <h3 class="footer_title"><img src="img/icon/address (2).svg" alt=""> Puerto Peñasco</h3>
-                            <p>Av. Coahuila 444, Int A4, Col. Benito Juarez, Puerto Peñasco Sonora,835540</p>
-                            <h3 class="footer_title"> <img src="img/icon/support (2).svg" alt=""> Contacto</h3>
-                            <p>638 383 6320 Ext 109 <br>informacion@lrcapitalpacifico.com</p>
+                            <p>Av. Coahuila 444, Int A4, Col. Benito Juarez, 83554</p>
+                            <span><img src="img/icon/support (2).svg" alt=""> 638 383 6320 Ext 109 </span></br></br>
+                            <h3 class="footer_title"><img src="img/icon/address (2).svg" alt=""> Veracruz, Veracruz.</h3>
+                            <p>Cocoteros N.9, Colonia Bruno Pagliai, Ciudad industrial, 91697</p>                 
+                            <span><img src="img/icon/support (2).svg" alt=""> +52 229 283 9320</span>
                         </div>
+                        
                     </div>
 
         <!--            <div class="col-xl-3 col-md-6 col-lg-3">
@@ -361,12 +394,19 @@
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                Enviar Mensaje
+                                Subscribirse
                             </h3>
-                            <p class="newsletter_text">Envíanos un mensaje para brindarle más información.</p>
-                            <form action="#" class="newsletter_form">
-                                <input type="text" placeholder="Ingrese su E-mail">
-                                <button type="submit">Enviar</button>
+                            <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                                <span class="newsletter_text">Subscribase para brindarle más información.</span>
+                                <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
+                                <input type="email" name="email" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                <!-- form message -->
+                                <p><span id="sendmessagefooter"></span></p>
+                                <div class="errormessage" id="errormessage"></div>
+                                <!-- Send message -->
+                                <div class="form-group mt-3">
+                                    <button onclick="showHint()" type="submit">Enviar</button>
+                                </div>                                                                        
                             </form>
                         </div>
                     </div>
@@ -403,6 +443,16 @@
     </div>
   </div>
 
+  <div class="modal fade custom-success-pop" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="pop-container">
+                <span>Mensaje Enviado</span>
+                <button onclick="$('#successModal').modal('hide')">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
         <!-- JS here -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
@@ -424,12 +474,58 @@
         <script src="js/gijgo.min.js"></script>
     
         <!--contact js-->
-        <script src="js/contact.js"></script>
+
         <script src="js/jquery.ajaxchimp.min.js"></script>
         <script src="js/jquery.form.js"></script>
         <script src="js/jquery.validate.min.js"></script>
-        <script src="js/mail-script.js"></script>
+      <!--  <script src="js/mail-script.js"></script>-->
+        <!--  <script src="js/contact.js"></script>-->
+       <script src="contactform/contactform.js"></script>
+    <!--    <script src="js/newsletter.js"></script>-->
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
     
+        // Function to remove a query parameter from the URL
+        function removeUrlParameter(name) {
+            var url = window.location.href;
+            var urlParts = url.split('?');
+    
+            if (urlParts.length >= 2) {
+                var prefix = encodeURIComponent(name) + '=';
+                var queryParams = urlParts[1].split(/[&;]/g);
+    
+                for (var i = queryParams.length; i-- > 0;) {
+                    if (queryParams[i].lastIndexOf(prefix, 0) !== -1) {
+                        queryParams.splice(i, 1);
+                    }
+                }
+    
+                url = urlParts[0] + (queryParams.length > 0 ? '?' + queryParams.join('&') : '');
+                history.replaceState(null, null, url);
+            }
+        }
+    
+        // Check if the 'message-success' parameter is true
+        var isSuccess = getUrlParameter('message-success') === 'true';
+    
+        // If 'message-success' is true, show a popup and remove the parameter
+        if (isSuccess) {
+            removeUrlParameter('message-success');
+            // document.getElementById("sendmessagefooter").innerHTML = 'Su mensaje ha sido enviado. Muchas gracias.';
+            setTimeout(function() {
+                $('#successModal').modal('show');
+            }, 500);
+            
+        }
+  //Contact
+        </script>
+
         <script src="js/main.js"></script>
         <script>
             $('#datepicker').datepicker({
@@ -450,6 +546,6 @@
 
 
 
-    </body>
+</body>
     
-    </html>
+</html>

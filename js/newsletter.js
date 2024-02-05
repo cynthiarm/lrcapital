@@ -10,52 +10,27 @@ $(document).ready(function(){
 
     // validate contactForm form
     $(function() {
-        $('.contactForm').validate({
+        $('.').validate({
             rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
+
                 email: {
                     required: true,
                     email: true
                 },
-                subject: {
-                    required: true,
-                    minlength: 4
-                },
-                message: {
-                    required: true,
-                    minlength: 20
-                }
             },
             messages: {
-                name: {
-                    required: "Please enter your full name",
-                    minlength: "your name must consist of at least 2 characters"
-                },
-
-
                 email: {
                     required: "Please enter a valid email"
                 },
-                subject: {
-                    required: "Please enter at least 4 chars of subject",
-                    minlength: "your subject must consist of at least 4 characters"
-                },
-                message: {
-                    required: "Please write something for us",
-
-                }
             },
             submitHandler: function(form) {
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"newsletter_form.php",
                     success: function(msg) {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#newsletter_form:input').attr('disabled', 'disabled');
+                        $('#newsletter_form').fadeTo( "slow", 1, function() {
                             $(this).find(':input').attr('disabled', 'disabled');
                             $(this).find('label').css('cursor','default');
                             $('#success').fadeIn()
@@ -64,7 +39,7 @@ $(document).ready(function(){
                         })
                     },
                     error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#newsletter_form').fadeTo( "slow", 1, function() {
                             $('#error').fadeIn()
                             $('.modal').modal('hide');
 		                	$('#error').modal('show');
