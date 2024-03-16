@@ -785,7 +785,7 @@ h3 {
 /* line 28, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
 .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
-  color: #ff9934;
+  color: #ffffff;
 }
 
 /* line 32, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
@@ -796,11 +796,36 @@ h3 {
 @media (max-width: 767px) {
   /* line 35, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
-    display: none;
+    display: contents;
   }
 
+  .header-area .main-header-area .main-menu ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    text-transform: capitalize;
+  }
+
+  .header-area .main-header-area .main-menu-spa ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    text-transform: capitalize;
+  }
+
+
   .slicknav_menu .slicknav_nav {
-    background: #001D38;
+    background: #000000;
     float: right;
     margin-top: 0;
     padding: 0;
@@ -818,11 +843,16 @@ h3 {
   .slicknav_nav a {
     font-size: 14px;
     font-weight: 400;
-    color: #FF9800;
+    color: #ffffff;
     text-transform: capitalize;
   }
 
   .header-area .main-header-area .main-menu ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 30px 0 0;
+  }
+  .header-area .main-header-area .main-menu-spa ul li {
     display: inline-block;
     position: relative;
     margin: 0 30px 0 0;
@@ -850,13 +880,100 @@ h3 {
   .header-area .main-header-area .main-menu ul li a i {
     font-size: 16px;
   }
+
+  .header-area .main-header-area .main-menu ul li:hover > a::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  .header-area .main-header-area .main-menu-spa ul li a {
+    color: #FFFFFF;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 400;
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    text-transform: capitalize;
+  }
+  
+  .header-area .main-header-area .main-menu-spa ul li:last-child a  {
+    padding-left: 0;
+    color: #ffffff;
+    margin-left: 15px;
+  }
+
+  .header-area .main-header-area .main-menu-spa ul li a i {
+    font-size: 16px;
+  }
+
+  .header-area .main-header-area .main-menu-spa ul li:hover > a::before {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  
+  /* line 256, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
+  .header-area .main-header-area .main-menu ul li:first-child a  {
+    padding-left: 0;
+    color: #ff9934;
+    margin-left: 15px;
+  }
+
+  .header-area .main-header-area .main-menu-spa ul li:first-child a  {
+    padding-left: 0;
+    color: #ff9934;
+    margin-left: 15px;
+  }
+
+  .footer .footer_top .footer_widget .newsletter_form button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    background: #ff9934;
+    padding: 10px;
+    padding: 0 22px;
+    cursor: pointer;
+    border-radius: 30px;
+    top: 31px!important;
+    right: 5px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  
+  .permisos_area .permisos_image img {
+    max-width: 100%!important;
+    margin-left: 0px!important;
+  
+  }
+  
 }
 
 
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 35, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_slick-nav.scss */
   .slicknav_menu .slicknav_nav a i {
-    display: none;
+    display: contents;
+  }
+
+  .slicknav_menu .slicknav_nav {
+    background: #000000;
+    float: right;
+    margin-top: 0;
+    padding: 0;
+    width: 95%;
+    padding: 0;
+    border-radius: 0px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 11px;
   }
 }
 
@@ -962,11 +1079,17 @@ h3 {
 .header-area .logo {
   margin-left: 45px;
 }
+
 @media (max-width: 767px) {
   /* line 1, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
   .header-area {
     padding-top: 0;
   }
+
+  .header-area .logo {
+    margin-left: 5px;
+  }
+  
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1074,12 +1197,42 @@ h3 {
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
   }
+
+  .header-area {
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+  }
+  
+  .header-area .container {
+    max-width: 1290px!important;
+  }
+  .header-area .logo {
+    margin-left: 5px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1500px) {
   /* line 77, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
   .header-area .main-header-area .Appointment .search_button {
     margin-right: 15px;
+  }
+
+  .header-area {
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+  }
+  
+  .header-area .container {
+    max-width: 1290px!important;
+  }
+  .header-area .logo {
+    margin-left: 5px;
   }
 }
 
@@ -1175,6 +1328,12 @@ h3 {
   margin-left: 30px;
 }
 
+.header-area .main-header-area .main-menu-spa {
+  padding: 30px 0px;
+  margin-left: 7px;
+}
+
+
 /* line 148, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li {
   display: inline-block;
@@ -1182,8 +1341,26 @@ h3 {
   margin: 0 30px 0 0;
 }
 
+.header-area .main-header-area .main-menu-spa ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 30px 0 0;
+}
+
 /* line 158, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li a {
+  color: #FFFFFF;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 400;
+  display: inline-block;
+  padding: 0px 0px 0px 0px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.header-area .main-header-area .main-menu-spa ul li a {
   color: #FFFFFF;
   font-size: 16px;
   text-transform: capitalize;
@@ -1233,6 +1410,21 @@ h3 {
   color: #ff9934;
 }
 
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a {
+    color: #fff;
+}
+
+#navbar a:hover,
+#navbar .active,
+#navbar .active:focus,
+#navbar li:hover>a {
+    color: #ff9934;
+}
+
+
 /* line 218, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li .submenu {
   position: absolute;
@@ -1278,8 +1470,18 @@ h3 {
   color: #000;
 }
 
+.header-area .main-header-area .main-menu-spa ul li .submenu li:hover a {
+  color: #000;
+}
+
 /* line 247, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li:hover > .submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 150%;
+}
+
+.header-area .main-header-area .main-menu-spa ul li:hover > .submenu {
   opacity: 1;
   visibility: visible;
   top: 150%;
@@ -1291,6 +1493,11 @@ h3 {
   transform: scaleX(1);
 }
 
+.header-area .main-header-area .main-menu-spa ul li:hover > a::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
 /* line 256, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_header.scss */
 .header-area .main-header-area .main-menu ul li:first-child a  {
   padding-left: 0;
@@ -1298,8 +1505,20 @@ h3 {
   margin-left: 15px;
 }
 
+.header-area .main-header-area .main-menu-spa ul li:first-child a  {
+  padding-left: 0;
+  color: #ff9934;
+  margin-left: 15px;
+}
+
 
 .header-area .main-header-area .main-menu ul li:last-child a  {
+  padding-left: 0;
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.header-area .main-header-area .main-menu-spa ul li:last-child a  {
   padding-left: 0;
   color: #ffffff;
   margin-left: 15px;
@@ -1335,6 +1554,11 @@ h3 {
     margin-left: 15px;
   }
   
+  .header-area .main-header-area .main-menu-spa ul li:last-child a  {
+    padding-left: 0;
+    color: #000000;
+    margin-left: 15px;
+  }
   
 }
 
@@ -2603,12 +2827,25 @@ h3 {
   border: none;
   font-size: 14px;
   color: #fff;
-  background: #A70000;
+  background: #ff9934;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
 }
 
+.newsletter_form button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background: #ff9934;
+  padding: 10px;
+  padding: 0 22px;
+  cursor: pointer;
+}
 /* line 152, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_testmonial.scss */
 .newsletter_text {
   font-size: 13px;
@@ -2886,6 +3123,16 @@ h3 {
     margin-bottom: 36px;
     text-align: center;
   }
+
+  .download_brochure {
+    background: #F5FBFF;
+    padding: 33px 45px;
+  }
+
+  .permisos_area {
+    padding: 70px 0 72px 0;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3099,6 +3346,20 @@ h3 {
   .contact_action_area1 .action_heading h3 {
     font-size: 25px;
   }
+
+  .responsabilidad_area .action_heading p {
+    color: #EAEAEA;
+    font-size: 16px!important;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+
+  .responsabilidad_area .action_heading h3 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 13px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3258,7 +3519,7 @@ h3 {
   }
 
   .footer .footer_top .footer_widget .footer-logo img {
-    width: 50px!important;
+    width: 60px!important;
   }
 
   .chose_area .chose_area-logo img {
@@ -3345,9 +3606,16 @@ h3 {
     z-index: 0;
     /* overflow: hidden; */
     filter: brightness(0.8);
-    width: 400px;
+    width: 420px;
     height: 350px;
     margin-top: 10px;
+    margin-left: -14px;
+  }
+
+  .permisos_details_area .permisos_image {
+    position: relative;
+    z-index: 0;
+    margin-top: 0px;
   }
 
 }
@@ -3417,6 +3685,7 @@ h3 {
 
 .permisos_area .permisos_info {
   padding-left: 28px;
+  text-align: left;
 }
 
 .permisos_details_area .permisos_info {
@@ -3470,7 +3739,7 @@ h3 {
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 137, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
   .chose_area .features_info {
-    padding-left: 30px;
+    padding-left: 150px;
     padding-top: 0;
     padding-bottom: 40px;
   }
@@ -3485,6 +3754,33 @@ h3 {
     padding-left: 30px;
     padding-top: 0;
     padding-bottom: 40px;
+  }
+
+  .header-area .main-header-area .main-menu {
+    padding: 30px 0px;
+    margin-left: 60px;
+  }
+  
+  .header-area .main-header-area .main-menu-spa {
+    padding: 30px 0px;
+    margin-left: 50px;
+  }
+
+  .responsabilidad_area .action_heading p {
+    color: #EAEAEA;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+
+  .products_area {
+    background: #f5f5f5;
+    padding: 120px 0 90px 0;
+    margin-left: -55px !important;
+  }
+
+  .contact_action_area .call_add_action {
+    text-align: center;
   }
 }
 
@@ -3613,20 +3909,6 @@ h3 {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-  /* line 178, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
-  .chose_area .features_info h3 br {
-    display: none;
-  }
-
-  .about_area .features_info h3 br {
-    display: none;
-  }
-
-  .permisos_area .permisos_info h3 br {
-    display: none;
-  }
-}
 
 /* line 190, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
 .chose_area .features_info p {
@@ -3655,6 +3937,65 @@ h3 {
 
 @media (min-width: 992px) and (max-width: 1200px) {
   /* line 196, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_contact_action.scss */
+  .chose_area .features_info h3 br {
+    display: none;
+  }
+
+  .about_area .features_info h3 br {
+    display: none;
+  }
+
+  .permisos_area .permisos_info h3 br {
+    display: none;
+  }
+
+  .cobertura-container .logo {
+    position: absolute;
+    left: calc(50% - 5px)!important;
+    top: calc(50% - 75px);
+    width: 80px;
+  }
+
+  .contact_action_area {
+    background-image: url(../img/oferta3.jpg);
+    position: relative;
+    z-index: 0;
+    padding: 78px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .contact_action_area1 {
+    background-image: url(../img/oferta1.jpg);
+    position: relative;
+    z-index: 0;
+    padding: 78px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .responsabilidad_area {
+    background-image: url(../img/banner/lrcp-nosotros-responsabilidad-u6821-fr.jpg);
+    position: relative;
+    z-index: 0;
+    padding: 55px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .oferta_area {
+    background-image: url(../img/oferta2.jpg);
+    position: relative;
+    z-index: 0;
+    padding: 55px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
   .chose_area .features_info p br {
     display: none;
   }
@@ -3665,6 +4006,52 @@ h3 {
 
   .permisos_area .permisos_info p br {
     display: none;
+  }
+
+  .footer {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #000000;
+  }
+  
+  /* line 7, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
+  .footer .footer_top {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  .footer .footer_top {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+
+  .chose_area {
+    padding: 100px 0 0px 0;
+    margin-top: -70px;
+  }
+
+  .download_brochure {
+    background: #F5FBFF;
+    padding: 33px 45px;
+    margin-top: -50px;
+  }
+
+  .values_area {
+    padding: 50px 0 0px 0!important;
+  }
+
+  .footer .copy-right_text {
+    padding-bottom: 30px;
+  }
+
+  .footer .footer_top .footer_widget .footer_title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #E0E0E0;
+    text-transform: capitalize;
+    margin-bottom: 10px;
   }
 }
 
@@ -4353,6 +4740,17 @@ h3 {
   #accordion h5 button i {
     display: none;
   }
+
+  #accordion h5 button.btn.btn-link.collapsed:after {
+    content: "\e64b";
+    color: #0f2137;
+    font-size: 14px;
+  }
+
+  #accordion h5 {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 /* line 104, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_accordion.scss */
@@ -4471,11 +4869,65 @@ h3 {
   font-weight: 300 !important;
 }
 
+.accordion_area .faq_ask #accordion button .button-text span  {
+  max-width: 90%;
+}
+
+.accordion_area .faq_ask #accordion button .button-text span  {
+  display: block;
+}
+
 @media (max-width: 767px) {
   /* line 59, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_accordion_area.scss */
-  .accordion_area .faq_ask #accordion button span {
-    display: none;
+  .accordion_area .faq_ask #accordion button .button-text span {
+    display: block;
   }
+
+  .accordion_area .faq_ask #accordion button .button-text span {
+    max-width: 90%;
+  }
+
+  .accordion_area .faq_ask #accordion .btn-link.focus, .accordion_area .faq_ask #accordion .btn-link:focus {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+    color: #ff9934 !important;
+  }
+
+  .accordion_area .faq_ask #accordion .btn-link.focus, .accordion_area .faq_ask #accordion .btn-link:focus {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+    color: #ff9934 !important;
+  }
+
+  .accordion_area .faq_ask #accordion button {
+    font-size: 15px;
+    color: #001D38 !important;
+    font-weight: 300 !important;
+  }
+
+  .accordion_area .faq_ask #accordion .card .card-body {
+    font-size: 15px;
+    line-height: 28px;
+    color: #727272;
+    padding: 10px 30px 32px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .accordion_area .faq_ask #accordion .card .card-header {
+    background-color: transparent;
+    padding: 4px 30px;
+  }
+
+  .accordion_area .faq_ask #accordion .btn-link.focus, .accordion_area .faq_ask #accordion .btn-link:focus {
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+    color: #ff9934 !important;
+  }
+  
 }
 
 /* line 65, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_accordion_area.scss */
@@ -5781,10 +6233,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
     background: #000000;
     text-align: center;
   }
-}
 
-@media (max-width: 767px) {
-  /* line 14, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
   .footer .footer_top .footer_widget {
     margin-bottom: 30px;
   }
@@ -5960,6 +6409,27 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
   font-weight: 500;
 }
 
+
+.footer .footer_top .footer_widget .newsletter_form .eng button  {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background: #ff9934;
+  padding: 10px;
+  padding: 0 22px;
+  cursor: pointer;
+  border-radius: 30px;
+  top: 31px;
+  right: 5px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
 /* line 140, ../../Arafath/CL/Cl November/223. Transportation/HTML/scss/_footer.scss */
 .footer .footer_top .footer_widget .newsletter_text {
   font-size: 13px;
@@ -6051,6 +6521,10 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 
 .bradcam_bg_1 {
   background-image: url(../img/banner/about.jpg);
+}
+
+.bradcam_bg_5 {
+  background-image: url(../img/banner/services1.png);
 }
 
 
@@ -6560,6 +7034,13 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 .service_area .single_service .thumb {
   overflow: hidden;
   position: relative;
+}
+
+.service_details_area .service_thumb {
+  overflow: hidden;
+  position: relative;
+  filter: brightness(0.6);
+
 }
 
 .products_area .single_product .thumb .owl-carousel .owl-item  {
@@ -10227,4 +10708,17 @@ h6 {
     border-radius: 5px;
     cursor: pointer;
     min-width: 100px;
+}
+
+.slicknav_nav:has(.dropdown.show) {
+  overflow: visible !important;
+}
+
+.button-text {
+  white-space: normal;
+  text-align: left !important;
+}
+
+h5:has(.btn>.button-text) {
+  text-align: left !important;
 }

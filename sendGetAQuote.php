@@ -80,7 +80,7 @@ $header .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 $header .= "Mime-Version: 1.0" . "\r\n";
 $header .= "Content-Type: text/html; charset=ISO-8859-1". "\r\n";
 
-$mail_to = 'crenteria@deviseis.com';
+$mail_to = 'informacion@lrcapitalpacifico.com';
 
 $success = mail($mail_to, $subject, $message, $header);
     //    if ($success) {

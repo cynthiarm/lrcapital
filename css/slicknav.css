@@ -216,6 +216,15 @@
     text-transform: capitalize;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .slicknav_nav a:hover {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 0;
+    color: #ffffff;
+ }
+
+} 
+
 .slicknav_nav .slicknav_arrow {
     float: right;
 }
