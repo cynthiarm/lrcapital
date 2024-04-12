@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="fonts/fontawesome-free-6.4.2-web/css/all.css">
     <link rel="stylesheet" href="fonts/flaticon.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    <script>
+ <!--  <script>
         function showHint() {
             $name = document.getElementById("name").value;
             $email = document.getElementById("email").value;
@@ -44,7 +44,7 @@
             }
 
         }
-    </script>
+    </script>-->
 </head>
 
 <body>
@@ -279,14 +279,14 @@
                                             </div>    
                                             <div class="col-sm-6">    
                                                 <div class="form-group">
-                                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu nombre'" placeholder="Escribe tu nombre" data-rule="minlen:4"
+                                                    <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu nombre'" placeholder="Escribe tu nombre" data-rule="minlen:4" data-rule="required"
                                                     data-msg="Escriba su nombre completo" />
                                                     <div class="validation"></div>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su dirección de correo electrónico'" placeholder="Escriba su dirección de correo electrónico" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                                    <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su dirección de correo electrónico'" placeholder="Escriba su dirección de correo electrónico" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida" data-rule="required">
                                                     <div class="validation"></div>
                                                 </div>
                                             </div>
@@ -397,13 +397,16 @@
                             <h3 class="footer_title">
                                 Subscribirse
                             </h3>
-                            <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                            <form id="newsletter_form" class="newsletter_form" role="form" action="newsletter_form.php" method="post">
                                 <span class="newsletter_text">Subscribase para brindarle más información.</span>
                                 <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
-                                <input type="email" name="email" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                <div class="input_field">
+                                    <input class="form-control valid" type="email" id="email" name="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese su e-mail'" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida." data-rule="required">
+                                    <div class="validation"></div>
+                                </div>
                                 <!-- form message -->
-                                <p><span id="sendmessagefooter"></span></p>
-                                <div class="errormessage" id="errormessage"></div>
+                                <p><span id="sendmessage"></span></p>
+                                <div class="newslettermessage" id="newslettermessage"></div>
                                 <!-- Send message -->
                                 <div class="form-group mt-3">
                                     <button onclick="showHint()" type="submit">Enviar</button>
@@ -482,6 +485,7 @@
       <!--  <script src="js/mail-script.js"></script>-->
         <!--  <script src="js/contact.js"></script>-->
        <script src="contactform/contactform.js"></script>
+       <script src="contactform/newsletter_form.js"></script>
     <!--    <script src="js/newsletter.js"></script>-->
     <script>
         // Function to get URL parameters

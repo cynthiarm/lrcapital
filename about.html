@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/slick/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick/slick-theme.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="fonts/fontawesome-free-6.4.2-web/css/fontawesome.css">
     <link rel="stylesheet" href="fonts/fontawesome-free-6.4.2-web/css/fontawesome.min.css">
@@ -634,19 +637,19 @@
                             <h3 class="footer_title">
                                 Subscribe
                             </h3>
-                            <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                            <form id="newsletter_form" class="newsletter_form" role="form" action="newsletter_form.php" method="post">
                                 <span class="newsletter_text">Subscribe to get more information.</span>
-                                <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
-                                <input type="email" name="email" placeholder="Enter your mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                <input hidden name="type" type="hidden" id="type" class="form-control" value='2' data-msg="Please enter at least 4 chars" />
+                                <div class="input_field">
+                                    <input class="form-control valid" type="email" id="email" name="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your mail'" placeholder="Enter your mail" data-rule="email" data-msg="Please enter a valid email." data-rule="required">
+                                    <div class="validation"></div>
+                                </div>
                                 <!-- form message -->
                                 <p><span id="sendmessage"></span></p>
-                                <div class="errormessage" id="errormessage"></div>
+                                <div class="newslettermessage" id="newslettermessage"></div>
                                 <!-- Send message -->
-                                <div class="form-group mt-3">
-                                    <div class="eng">
-                                        <button onclick="showHint()" type="submit">Send</button>
-                                    </div>
-                                    
+                                <div class="form-group eng button mt-3">
+                                    <button showHint() type="submit">Send</button>
                                 </div>                                                                        
                             </form>
                         </div>
@@ -704,7 +707,7 @@
     <script src="js/plugins.js"></script>
     <!-- <script src="js/gijgo.min.js"></script> -->
     <script src="js/slick.min.js"></script>
-
+    <script src="contactform/newsletter_form.js"></script>
 
 
     <!--contact js-->

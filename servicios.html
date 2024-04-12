@@ -35,7 +35,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    <script>
+   <!-- <script>
 		function showHint() {
 			//$companyname = document.getElementById("companyname").value;
 			$name = document.getElementById("name").value;
@@ -57,7 +57,7 @@
 			//}
 
 		}
-	</script>
+	</script>-->
 </head>
 
 <body>
@@ -255,99 +255,100 @@
         </div>
     </div>
     <!-- service_details_start  -->
-    <!-- Estimate_area start  -->
-    <div class="Estimate_area overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-5">
-                    <div class="Estimate_info">
-                        <h3>Solicite una Cotizacíon</h3>
-                        <p>Nos encontramos a su disposición en los siguientes medios de contacto o mediante un mensaje
-                            directo en el formato debajo y responderemos a la brevedad.</p>
-                        <a href="#" class="boxed-btn3">638 383 6320 Ext 109</a>
-                    </div>
+   <!-- Estimate_area start  -->
+   <div class="Estimate_area overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-5">
+                <div class="Estimate_info">
+                    <h3>Solicite una Cotizacíon</h3>
+                    <p>Nos encontramos a su disposición en los siguientes medios de contacto o mediante un mensaje
+                        directo en el formato debajo y responderemos a la brevedad.</p>
+                    <a href="#" class="boxed-btn3">638 383 6320 Ext 109</a>
                 </div>
-                <div class="col-xl-8 col-lg-8 col-md-7">
-                    <div class="form">
-                        <form id="getaQuote" class="getaQuote" role="form" action="sendGetAQuote.php" method="post">
-                            <input hidden name="type" type="hidden" id="type" class="form-control" value='1'
-									data-msg="Please enter at least 4 chars" />
-                            <div class="row">
-                                <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <input type="text" class="form-control" placeholder="Nombre" name="name" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                        <div class="validation"></div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida" />
-                                        <div class="validation"></div>
-                                    </div>
-                                </div>
-                                <!--      <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Product type">Product type</option>
-                                            <option value="1">small</option>
-                                            <option value="2">standard</option>
-                                            <option value="3">high</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Product size">Product size</option>
-                                            <option value="1">M</option>
-                                            <option value="2">L</option>
-                                            <option value="3">Xl</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="City of departure">City of departure</option>
-                                            <option value="1">departure</option>
-                                            <option value="2">departure</option>
-                                            <option value="3">departure</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="input_field">
-                                        <select class="wide">
-                                            <option data-display="Delivery city">City of departure</option>
-                                            <option value="1">Delivery</option>
-                                            <option value="2">Delivery</option>
-                                            <option value="3">Delivery</option>
-                                        </select>
-                                    </div>
-                                </div>-->
-                                <div class="col-xl-12">
-                                    <div class="input_field">
-                                        <textarea id="message" name="message" class="form-control" placeholder="Mensaje" data-rule="required"
-                                        data-msg="Por favor, escriba algo para nosotros"></textarea>
-                                    </div>
-                                </div>
-                                <!-- form message -->
-								<p><span id="sendmessage" class="text-white"></span></p>
-								<div class="errormessage text-center" class="text-white" id="errormessage"></div>
-								<!-- Send message -->
-                                <div class="col-xl-12">
-                                    <div class="input_field">
-                                        <button onclick="showHint()" class="boxed-btn3-line" type="submit">Solicitar Cotización</button>
-                                    </div>
+            </div>
+            <div class="col-xl-8 col-lg-8 col-md-7">
+                <div class="form">
+                    <form id="getaquote" class="getaquote" role="form" action="sendGetAQuote.php" method="post">
+                        <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <input name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escribe tu nombre'" placeholder="Escribe tu nombre" data-rule="minlen:4" data-rule="required" data-msg="Escriba su nombre completo."/>
+                                    <div class="validation"></div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <input name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Escriba su dirección de correo electrónico'" placeholder="Escriba su dirección de correo electrónico." data-rule="email" data-msg="Escriba una dirección de correo electrónico válida." data-rule="required">
+                                 <!--    <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida" data-rule="required" />-->
+                                    <div class="validation"></div>
+                                </div>
+                            </div>
+                            <!--      <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="Product type">Product type</option>
+                                        <option value="1">small</option>
+                                        <option value="2">standard</option>
+                                        <option value="3">high</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="Product size">Product size</option>
+                                        <option value="1">M</option>
+                                        <option value="2">L</option>
+                                        <option value="3">Xl</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="City of departure">City of departure</option>
+                                        <option value="1">departure</option>
+                                        <option value="2">departure</option>
+                                        <option value="3">departure</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="input_field">
+                                    <select class="wide">
+                                        <option data-display="Delivery city">City of departure</option>
+                                        <option value="1">Delivery</option>
+                                        <option value="2">Delivery</option>
+                                        <option value="3">Delivery</option>
+                                    </select>
+                                </div>
+                            </div>-->
+                            <div class="col-xl-12">
+                                <div class="input_field">
+                                    <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Escriba su mensaje" data-rule="required" data-msg="Por favor, escriba algo para nosotros."></textarea>
+                                    <div class="validation"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- form message -->
+                            <p><span id="sendmessage text-white"></span></p>
+                            <div class="newslettermessage" id="newslettermessage"></div>
+                            <!-- Send message -->
+                            <div class="col-xl-12">
+                                <div class="input_field">
+                                    <button onclick="showHint()" class="boxed-btn3-line" type="submit">Solicitar Cotización</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Estimate_area end  -->
+</div>
+<!-- Estimate_area end  -->
 
     <!-- contact_location  -->
     <!-- <div class="contact_location">
@@ -462,12 +463,15 @@
                             <h3 class="footer_title">
                                 Subscribirse
                             </h3>
-                            <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                            <form id="newsletter_form" class="newsletter_form" role="form" action="newsletter_form.php" method="post">
                                 <span class="newsletter_text">Subscribase para brindarle más información.</span>
                                 <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
-                                <input type="email" name="email" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                                <div class="input_field">
+                                    <input class="form-control valid" type="email" id="email" name="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ingrese su e-mail'" placeholder="Ingrese su E-mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida." data-rule="required">
+                                    <div class="validation"></div>
+                                </div>
                                 <!-- form message -->
-                                <p><span id="sendmessagefooter"></span></p>
+                                <p><span id="sendmessage"></span></p>
                                 <div class="errormessage" id="errormessage"></div>
                                 <!-- Send message -->
                                 <div class="form-group mt-3">
@@ -531,6 +535,7 @@
     <!-- <script src="js/gijgo.min.js"></script> -->
     <script src="js/slick.min.js"></script>
     <script src="contactform/getaquote.js"></script>
+    <script src="contactform/newsletter_form.js"></script>
 
 
     <!--contact js-->

@@ -38,12 +38,10 @@
     <link rel="stylesheet" href="css/slick-carousel/slick/slick-theme.css">
     <link rel="stylesheet" href="css/slick-carousel/slick/slick.css">
 
-
-
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    <script>
+  <!--  <script>
 		function showHint() {
 			//$companyname = document.getElementById("companyname").value;
 			$name = document.getElementById("name").value;
@@ -65,7 +63,7 @@
 			//}
 
 		}
-	</script>
+	</script>-->
 </head>
 
 <body>
@@ -580,21 +578,18 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-7">
                     <div class="form">
-                        <form id="getaQuote" class="getaQuote" role="form" action="sendGetAQuote.php" method="post">
-
-                            <input hidden name="type" type="hidden" id="type" class="form-control" value='2'
-                            data-msg="Please enter at least 4 chars" />
-
+                        <form id="getaquote" class="getaquote" role="form" action="sendGetAQuote.php" method="post">
+                            <input hidden name="type" type="hidden" id="type" class="form-control" value='2' data-msg="Please enter at least 4 chars" />
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="text" class="form-control" placeholder="Name" name="name" id="name" data-rule="minlen:4" data-msg="Escriba al menos 4 caracteres" />
+                                        <input name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name" data-rule="minlen:4" data-rule="required" data-msg="Enter your full name."/>
                                         <div class="validation"></div>
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="input_field">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                                        <input name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email'" placeholder="Enter your email" data-rule="email" data-msg="Please enter a valid email." data-rule="required">
                                         <div class="validation"></div>
                                     </div>
                                 </div>
@@ -640,8 +635,8 @@
                                 </div>-->
                                 <div class="col-xl-12">
                                     <div class="input_field">
-                                        <textarea id="message" name="message" class="form-control" placeholder="Message" data-rule="required"
-                                        data-msg="Please write something for us"></textarea>
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter your message" data-rule="required" data-msg="Please write something for us."></textarea>
+                                        <div class="validation"></div>
                                     </div>
                                 </div>
                                 <!-- form message -->
@@ -775,18 +770,19 @@
                         <h3 class="footer_title">
                             Subscribe
                         </h3>
-                        <form action="newsletter_form.php" class="newsletter_form" method="post" id="newsletter_form" role="form">
+                        <form id="newsletter_form" class="newsletter_form" role="form" action="newsletter_form.php" method="post">
                             <span class="newsletter_text">Subscribe to get more information.</span>
-                            <input hidden name="type" type="hidden" id="type" class="form-control" value='1' data-msg="Please enter at least 4 chars" />
-                            <input type="email" name="email" placeholder="Enter your mail" data-rule="email" data-msg="Escriba una dirección de correo electrónico válida">
+                            <input hidden name="type" type="hidden" id="type" class="form-control" value='2' data-msg="Please enter at least 4 chars" />
+                            <div class="input_field">
+                                <input class="form-control valid" type="email" id="email" name="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your mail'" placeholder="Enter your mail" data-rule="email" data-msg="Please enter a valid email." data-rule="required">
+                                <div class="validation"></div>
+                            </div>
                             <!-- form message -->
                             <p><span id="sendmessage"></span></p>
-                            <div class="errormessage" id="errormessage"></div>
+                            <div class="newslettermessage" id="newslettermessage"></div>
                             <!-- Send message -->
-                            <div class="form-group mt-3">
-                                <div class="eng">
-                                    <button onclick="showHint()" type="submit">Send</button>
-                                </div>
+                            <div class="form-group eng button mt-3">
+                                <button onclick="showHint()" type="submit">Send</button>
                             </div>                                                                        
                         </form>
                     </div>
@@ -849,12 +845,10 @@
     <!-- <script src="js/gijgo.min.js"></script> -->
     <!--  <script src="js/slick.min.js"></script>-->
     <script src="contactform/getaquote.js"></script>
-
-
-
+    <script src="contactform/newsletter_form.js"></script>
 
     <!--contact js-->
-    <script src="js/contact.js"></script>
+  <!--  <script src="js/contact.js"></script>-->
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
@@ -862,7 +856,66 @@
     <script src="js/script.js"></script>
 
     <script src="js/main.js"></script>
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+    
+        // Function to remove a query parameter from the URL
+        function removeUrlParameter(name) {
+            var url = window.location.href;
+            var urlParts = url.split('?');
+    
+            if (urlParts.length >= 2) {
+                var prefix = encodeURIComponent(name) + '=';
+                var queryParams = urlParts[1].split(/[&;]/g);
+    
+                for (var i = queryParams.length; i-- > 0;) {
+                    if (queryParams[i].lastIndexOf(prefix, 0) !== -1) {
+                        queryParams.splice(i, 1);
+                    }
+                }
+    
+                url = urlParts[0] + (queryParams.length > 0 ? '?' + queryParams.join('&') : '');
+                history.replaceState(null, null, url);
+            }
+        }
+    
+        // Check if the 'message-success' parameter is true
+        var isSuccess = getUrlParameter('message-success') === 'true';
+    
+        // If 'message-success' is true, show a popup and remove the parameter
+        if (isSuccess) {
+            removeUrlParameter('message-success');
+            // document.getElementById("sendmessagefooter").innerHTML = 'Su mensaje ha sido enviado. Muchas gracias.';
+            setTimeout(function() {
+                $('#successModal').modal('show');
+            }, 500);
+            
+        }
+  //Contact
+        </script>
 
+        <script src="js/main.js"></script>
+        <script>
+            $('#datepicker').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+            });
+            $('#datepicker2').datepicker({
+                iconsLibrary: 'fontawesome',
+                icons: {
+                 rightIcon: '<span class="fa fa-caret-down"></span>'
+             }
+    
+            });
+        </script>
 
 
 
