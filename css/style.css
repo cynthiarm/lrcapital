@@ -7541,6 +7541,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
 .contact-info_details {
   padding: 30px 0 20px 10px;
   box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
+  justify-content: center;
 }
 
 .contact-info__icon img {
